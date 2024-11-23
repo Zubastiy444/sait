@@ -1,4 +1,4 @@
-/* Основные стили для тела сайта */
+Основные стили для тела сайта
 body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     margin: 0;
@@ -15,12 +15,16 @@ header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* маленькая тень */
-    position: fixed; /* Закрепление шапки */
-    top: 0; /* Шапка будет прикреплена к верхней части страницы */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    /* маленькая тень */
+    position: fixed;
+    /* Закрепление шапки */
+    top: 0;
+    /* Шапка будет прикреплена к верхней части страницы */
     left: 0;
     right: 0;
-    z-index: 1000; /* Чтобы шапка была выше других элементов */
+    z-index: 1000;
+    /* Чтобы шапка была выше других элементов */
 }
 
 header h1 {
@@ -44,14 +48,16 @@ nav a:hover {
 /* Баннер с изображением */
 .banner {
     width: 100%;
-    height: 500px; /* Увеличиваем высоту баннера */
-    background: url('your-image.jpg') no-repeat center center/cover;
+    height: 500px;
+    /* Увеличиваем высоту баннера */
+    background: url('./banner/banner.jpg') no-repeat center center/cover;
     position: relative;
     display: flex;
     justify-content: center;
     align-items: center;
     text-align: center;
-    margin-top: 60px; /* Чтобы избежать перекрытия шапкой */
+    margin-top: 60px;
+    /* Чтобы избежать перекрытия шапкой */
 }
 
 .banner-text {
@@ -91,8 +97,10 @@ h2 {
 .photos {
     display: flex;
     flex-direction: column;
-    gap: 20px; /* Расстояние между картинками */
-    max-width: 40%; /* Ширина блока с картинками */
+    gap: 20px;
+    /* Расстояние между картинками */
+    max-width: 40%;
+    /* Ширина блока с картинками */
 }
 
 .photo-item {
@@ -110,33 +118,43 @@ h2 {
 }
 
 .photo-item img {
-    width: 400px; /* Фиксированная ширина */
-    height: 300px; /* Фиксированная высота */
-    object-fit: cover; /* Сохранение пропорций внутри заданных размеров */
+    width: 400px;
+    /* Фиксированная ширина */
+    height: 300px;
+    /* Фиксированная высота */
+    object-fit: cover;
+    /* Сохранение пропорций внутри заданных размеров */
     border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Начальная тень */
-    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out; /* Плавный переход для тени и масштаба */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    /* Начальная тень */
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+    /* Плавный переход для тени и масштаба */
 }
 
 /* Эффект при наведении */
 .photo-item img:hover {
-    transform: scale(1.05); /* Увеличиваем фото при наведении */
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3); /* Усиленная тень при наведении */
+    transform: scale(1.05);
+    /* Увеличиваем фото при наведении */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+    /* Усиленная тень при наведении */
 }
 
 
 .about-text {
-    flex: 1; /* Текст занимает оставшееся пространство */
+    flex: 1;
+    /* Текст занимает оставшееся пространство */
     font-size: 18px;
     line-height: 1.6;
     color: #555;
-    margin-left: 35px; /* Начальный сдвиг текста вправо */
+    margin-left: 35px;
+    /* Начальный сдвиг текста вправо */
 }
 
 /* Для мобильной адаптации */
 @media (max-width: 768px) {
     .about-text {
-        margin-left: 0; /* Убираем отступ для узких экранов */
+        margin-left: 0;
+        /* Убираем отступ для узких экранов */
     }
 }
 
@@ -172,6 +190,7 @@ h2 {
     0% {
         opacity: 0;
     }
+
     100% {
         opacity: 1;
     }
@@ -209,37 +228,52 @@ h2 {
 
 /*примеры работ*/
 #results {
-    text-align: center; /* Центрируем заголовок и контейнер */
-    margin-bottom: 150px; /* Отступ снизу */
+    text-align: center;
+    /* Центрируем заголовок и контейнер */
+    margin-bottom: 150px;
+    /* Отступ снизу */
 }
 
 .image-banner {
-    display: grid; /* Используем сетку для расположения картинок */
-    grid-template-columns: repeat(3, 1fr); /* 3 картинки в строке */
-    gap: 15px; /* Отступы между картинками */
-    width: 100%; /* Ширина контейнера */
-    height: 800px; /* Ширина контейнера */
-    margin: 0 auto; /* Центрируем контейнер по горизонтали */
+    display: grid;
+    /* Используем сетку для расположения картинок */
+    grid-template-columns: repeat(3, 1fr);
+    /* 3 картинки в строке */
+    gap: 15px;
+    /* Отступы между картинками */
+    width: 100%;
+    /* Ширина контейнера */
+    height: 800px;
+    /* Ширина контейнера */
+    margin: 0 auto;
+    /* Центрируем контейнер по горизонтали */
     margin-bottom: 150px;
 }
 
 .image-item {
-    width: 100%; /* Ширина каждого элемента в сетке 100% от своей ячейки */
-    height: 100%; /* Фиксированная высота для каждой картинки */
-    overflow: fill; /* Скрываем лишнее, если изображение выходит за пределы */
+    width: 100%;
+    /* Ширина каждого элемента в сетке 100% от своей ячейки */
+    height: 100%;
+    /* Фиксированная высота для каждой картинки */
+    overflow: fill;
+    /* Скрываем лишнее, если изображение выходит за пределы */
 }
 
 .image-item img {
-    width: 100%; /* Ширина изображения 100% от ширины контейнера */
-    height: 100%; /* Высота изображения 100% от высоты контейнера */
-    border-radius: 15px;    
+    width: 100%;
+    /* Ширина изображения 100% от ширины контейнера */
+    height: 100%;
+    /* Высота изображения 100% от высоты контейнера */
+    border-radius: 15px;
 }
+
 /* контакты------------------------------------------------------------------------------------- */
 /* Контейнер для карты и координат */
 .contact-content {
     display: flex;
     justify-content: space-between;
-    gap: 10px; /* Уменьшено расстояние между блоками */
+    gap: 10px;
+    /* Уменьшено расстояние между блоками */
 }
 
 /* Контейнер для карты */
@@ -251,20 +285,23 @@ h2 {
 /* Контейнер для информации с контактами */
 .contact-info {
     width: 30%;
-    margin-left: 35px; /* Добавлен отступ справа от карты */
+    margin-left: 35px;
+    /* Добавлен отступ справа от карты */
 }
 
 /* Информация о компании */
 .contact-info h3 {
     font-size: 1.5rem;
     color: #333;
-    margin-bottom: 5px; /* Уменьшено расстояние до текста */
+    margin-bottom: 5px;
+    /* Уменьшено расстояние до текста */
 }
 
 .contact-info p {
     font-size: 1rem;
     color: #555;
-    margin: 2px 0; /* Уменьшено расстояние между строками */
+    margin: 2px 0;
+    /* Уменьшено расстояние между строками */
 }
 
 /* Социальные ссылки */
@@ -273,14 +310,16 @@ h2 {
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 5px; /* Уменьшено расстояние между иконками */
+    gap: 5px;
+    /* Уменьшено расстояние между иконками */
 }
 
 /* Социальные сети заголовок */
 .social-links h3 {
     font-size: 1.5rem;
     color: #333;
-    margin-bottom: 5px; /* Уменьшено расстояние до списка */
+    margin-bottom: 5px;
+    /* Уменьшено расстояние до списка */
 }
 
 .social-links ul {
@@ -289,12 +328,15 @@ h2 {
     margin: 0;
     display: flex;
     flex-direction: column;
-    gap: 10px; /* Уменьшено расстояние между иконками */
+    gap: 10px;
+    /* Уменьшено расстояние между иконками */
 }
 
 .social-links ul li a {
-    width: 50px; /* Уменьшено размер кнопок */
-    height: 50px; /* Уменьшено размер кнопок */
+    width: 50px;
+    /* Уменьшено размер кнопок */
+    height: 50px;
+    /* Уменьшено размер кнопок */
     display: flex;
     align-items: center;
     justify-content: center;
@@ -302,7 +344,8 @@ h2 {
     border-radius: 50%;
     text-decoration: none;
     color: #fff;
-    font-size: 25px; /* Уменьшен размер иконок */
+    font-size: 25px;
+    /* Уменьшен размер иконок */
     transition: all 0.3s ease;
 }
 
@@ -330,7 +373,9 @@ h2 {
         align-items: center;
     }
 
-    .map-container, .contact-info, .social-links {
+    .map-container,
+    .contact-info,
+    .social-links {
         width: 100%;
         margin-bottom: 20px;
     }
@@ -364,7 +409,7 @@ h2 {
 }
 
 /* Поля ввода */
-.contact-form input[type="text"], 
+.contact-form input[type="text"],
 .contact-form input[type="email"],
 .contact-form textarea {
     width: 100%;
@@ -390,7 +435,7 @@ h2 {
 }
 
 /* Кнопка отправки */
-.contact-form button {
+/* .contact-form button {
     width: 120px;
     padding: 12px;
     font-size: 1.2rem;
@@ -400,20 +445,20 @@ h2 {
     border-radius: 5px;
     cursor: pointer;
     transition: background-color 0.3s ease;
-}
+} */
 
 /* Кнопка при наведении */
-.contact-form button:hover {
+/* .contact-form button:hover {
     background-color: #9a5108;
-}
+} */
 
 /* Мобильная адаптация */
-@media (max-width: 768px) {
+/* @media (max-width: 768px) {
     .contact-form {
         width: 90%;
         margin: 20px auto;
     }
-}
+} */
 
 /*подвал ---------------------------------------*/
 /* Подвал */
@@ -465,3 +510,182 @@ footer {
 .footer-social-links a:hover {
     color: #f4a261;
 }
+
+/*блок книги с картинками--------------------------------------*/
+.book-slider-container {
+    position: relative;
+    width: 600px; /* Размеры контейнера */
+    height: 400px; /* Высота */
+    overflow: hidden;
+    margin: 0 auto;
+}
+
+.book-slider {
+    display: flex;
+    transition: transform 0.5s ease-in-out; /* Плавная анимация */
+}
+
+.book-slide {
+    flex-shrink: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+}
+
+.page {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+.page img {
+    max-width: 100%;
+    max-height: 100%;
+}
+
+button.prev-btn, button.next-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    z-index: 10;
+}
+
+button.prev-btn {
+    left: 10px;
+}
+
+button.next-btn {
+    right: 10px;
+}
+
+/* Стили для модального окна */
+.modal {
+    display: none;
+    /* Скрыто по умолчанию */
+    position: fixed;
+    z-index: 9999;
+    /* Модальное окно поверх всех элементов */
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    /* Полупрозрачный фон */
+    justify-content: center;
+    align-items: center;
+}
+
+/* Стили для изображения в модальном окне */
+.modal img {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain;
+    /* Сохраняем пропорции изображения */
+}
+
+/* Кнопка закрытия */
+.close-btn {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    color: white;
+    font-size: 30px;
+    font-weight: bold;
+    background-color: red;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    text-align: center;
+    line-height: 40px;
+    cursor: pointer;
+    z-index: 10000;
+}
+
+
+/* Стили кнопки */
+#toggle-slider-btn {
+    display: block;
+    margin-bottom: 10px;
+    padding: 10px 20px;
+    font-size: 16px;
+    color: #fff;
+    background-color: #6c757d; /* Серый цвет */
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+/* Эффект наведения на кнопку */
+#toggle-slider-btn:hover {
+    background-color: #5a6268; /* Более тёмный серый при наведении */
+    transform: scale(1.05);
+}
+
+/* Стили кнопки */
+#toggle-portrait-slider-btn {
+    display: block;
+    margin-bottom: 10px;
+    padding: 10px 20px;
+    font-size: 16px;
+    color: #fff;
+    background-color: #6c757d; /* Серый цвет */
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+/* Эффект наведения на кнопку */
+#toggle-portrait-slider-btn:hover {
+    background-color: #5a6268; /* Более тёмный серый при наведении */
+    transform: scale(1.05);
+}
+/* Стили каталога */
+#catalog {
+    display: none; /* Изначально скрыт */
+    border: 1px solid #ccc;
+    padding: 15px;
+    background-color: #f9f9f9;
+    border-radius: 5px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    font-size: 14px;
+}
+
+/* Стили списка в каталоге */
+#catalog ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+#catalog ul li {
+    margin-bottom: 10px;
+    padding: 5px;
+    border-bottom: 1px solid #ddd;
+}
+
+#catalog ul li:last-child {
+    border-bottom: none;
+}
+
+.prev-btn, .next-btn {
+    background-color: #000;
+    color: white;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    font-size: 18px;
+}
+
+.prev-btn:hover, .next-btn:hover {
+    background-color: #444;
+}
+
