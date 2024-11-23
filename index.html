@@ -4,8 +4,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Помним, любим, скорбим</title>
-    <link rel="icon" href="./icons/mogils.ico" type="image/png"> <!-- Иконка сайта -->
+    <title>Поминим, любим, скорбим</title>
+    <link rel="icon" href="/icons/mogils.ico" type="image/png"> <!-- Иконка сайта -->
     <link href="https://fonts.googleapis.com/css2?family=Segoe+UI:wght@400;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 
@@ -16,7 +16,7 @@
 <body>
     <!-- Шапка сайта с заголовком и навигацией -->
     <header>
-        <h1>Помним, любим, скорбим</h1>
+        <h1>Поминим, любим, скорбим</h1>
         <nav>
             <a href="#about">О нас</a>
             <a href="#products">Продукция</a>
@@ -77,30 +77,121 @@
     <div class="section" id="products">
         <h2>Продукция</h2>
         <div class="section-content">
+            <!-- Первый слайдер - Памятники без гравировки -->
             <div>
-                <h3>Памятники</h3>
+                <h3>Памятники без гравировки</h3>
                 <p>Мы предлагаем различные виды памятников, выполненные из гранита, мрамора и других материалов, с
                     возможностью индивидуального дизайна.</p>
+                <button id="toggle-slider-btn" style="display: block; margin-bottom: 10px;">Показать каталог</button>
+                <div class="book-slider-container" style="display: none;">
+                    <div class="book-slider">
+                        <div class="book-slide">
+                            <div class="page left-page">
+                                <img src="/catalog/123456.png" alt="Продукт 1" class="clickable-img">
+                            </div>
+                            <div class="page right-page">
+                                <img src="/catalog/789101112.png" alt="Продукт 2" class="clickable-img">
+                            </div>
+                        </div>
+                        <div class="book-slide">
+                            <div class="page left-page">
+                                <img src="/catalog/131415161718.png" alt="Продукт 3" class="clickable-img">
+                            </div>
+                            <div class="page right-page">
+                                <img src="/catalog/192021222324.png" alt="Продукт 4" class="clickable-img">
+                            </div>
+                        </div>
+                        <div class="book-slide">
+                            <div class="page left-page">
+                                <img src="/catalog/252627282930.png" alt="Продукт 5" class="clickable-img">
+                            </div>
+                            <div class="page right-page">
+                                <img src="/catalog/313233343536.png" alt="Продукт 6" class="clickable-img">
+                            </div>
+                        </div>
+                        <div class="book-slide">
+                            <div class="page left-page">
+                                <img src="/catalog/373839404142.png" alt="Продукт 7" class="clickable-img">
+                            </div>
+                            <div class="page right-page">
+                                <img src="/catalog/434445464748.png" alt="Продукт 8" class="clickable-img">
+                            </div>
+                        </div>
+                        <div class="book-slide">
+                            <div class="page left-page">
+                                <img src="/catalog/495051525354.png" alt="Продукт 9" class="clickable-img">
+                            </div>
+                            <div class="page right-page">
+                                <img src="/catalog/555657585960.png" alt="Продукт 10" class="clickable-img">
+                            </div>
+                        </div>
+                        <div class="book-slide">
+                            <div class="page left-page">
+                                <img src="/catalog/616263646566.png" alt="Продукт 11" class="clickable-img">
+                            </div>
+                            <div class="page right-page">
+                                <img src="/catalog/676869707172.png" alt="Продукт 12" class="clickable-img">
+                            </div>
+                        </div>
+                    </div>
+                    <button class="prev-btn">←</button>
+                    <button class="next-btn">→</button>
+                </div>
             </div>
+            <!-- Второй слайдер - Портреты на памятниках -->
             <div>
                 <h3>Портреты на памятниках</h3>
                 <p>Изображения на памятниках с использованием высококачественных технологий, которые сохраняют четкость
                     и долговечность.</p>
+                <button id="toggle-portrait-slider-btn" style="display: block; margin-bottom: 10px;">Показать
+                    каталог</button>
+                <div class="book-slider-container" id="portrait-slider" style="display: none;">
+                    <div class="book-slider">
+                        <div class="book-slide">
+                            <div class="page left-page">
+                                <img src="/catalog/engraving/123456.png" alt="Продукт 1" class="clickable-img">
+                            </div>
+                            <div class="page right-page">
+                                <img src="/catalog/engraving/789101112.png" alt="Продукт 2" class="clickable-img">
+                            </div>
+                        </div>
+                        <div class="book-slide">
+                            <div class="page left-page">
+                                <img src="/catalog/engraving/131415161718.png" alt="Продукт 3" class="clickable-img">
+                            </div>
+                            <div class="page right-page">
+                                <img src="/catalog/engraving/192021222324.png" alt="Продукт 4" class="clickable-img">
+                            </div>
+                        </div>
+                        <!-- ... остальные слайды ... -->
+                    </div>
+                    <button class="prev-btn">←</button>
+                    <button class="next-btn">→</button>
+                </div>
             </div>
+
         </div>
     </div>
+    </div>
+
+    <!-- Модальное окно для полноэкранного просмотра -->
+    <div id="image-modal" class="modal">
+        <span id="close-modal" class="close-btn">&times;</span>
+        <img id="modal-img" src="" alt="Full-screen image">
+    </div>
+
 
     <!-- Раздел "Примеры выполненных работ" -->
     <div class="section" id="results">
         <h2>Примеры выполненных работ</h2>
         <div class="image-banner">
             <!-- 6 картинок с фиксированной шириной и высотой -->
-            <div class="image-item"><img src="./photo/1 (18).jpg" alt="Результат 1"></div>
-            <div class="image-item"><img src="./photo/1 (12).jpg" alt="Результат 2"></div>
-            <div class="image-item"><img src="./photo/1 (16).jpg" alt="Результат 3"></div>
-            <div class="image-item"><img src="./photo/1 (17).jpg" alt="Результат 4"></div>
-            <div class="image-item"><img src="./photo/1 (19).jpg" alt="Результат 5"></div>
-            <div class="image-item"><img src="./photo/1 (20).jpg" alt="Результат 6"></div>
+            <div class="image-item"><img src="/photo/1 (18).jpg" alt="Результат 1"></div>
+            <div class="image-item"><img src="/photo/1 (12).jpg" alt="Результат 2"></div>
+            <div class="image-item"><img src="/photo/1 (16).jpg" alt="Результат 3"></div>
+            <div class="image-item"><img src="/photo/1 (17).jpg" alt="Результат 4"></div>
+            <div class="image-item"><img src="/photo/1 (19).jpg" alt="Результат 5"></div>
+            <div class="image-item"><img src="/photo/1 (20).jpg" alt="Результат 6"></div>
         </div>
     </div>
 
@@ -110,10 +201,9 @@
         <div class="contact-content">
             <!-- Интерактивная карта -->
             <div class="map-container">
-                <iframe src="https://yandex.ru/map-widget/v1/?um=constructor%3A14cca426904b4e1f3b18c0e10aa40bd6c2c691e5397dfe1a869ff852a0a9361d&amp;source=constructor" 
-                        width="800" 
-                        height="400" 
-                        frameborder="0">
+                <iframe
+                    src="https://yandex.ru/map-widget/v1/?um=constructor%3A14cca426904b4e1f3b18c0e10aa40bd6c2c691e5397dfe1a869ff852a0a9361d&amp;source=constructor"
+                    width="800" height="400" frameborder="0">
                 </iframe>
             </div>
             <div class="contact-info">
@@ -133,7 +223,7 @@
     </div>
 
     <!-- Форма обратной связи -->
-    <div class="contact-form">
+    <!-- <div class="contact-form">
         <h3>Свяжитесь с нами</h3>
         <form action="#" method="post">
             <label for="name">Ваше имя:</label>
@@ -147,7 +237,7 @@
 
             <button type="submit">Отправить</button>
         </form>
-    </div>
+    </div> -->
 
     <!-- Подвал сайта с дополнительной информацией и навигацией -->
     <footer>
@@ -165,7 +255,7 @@
             </div>
         </div>
     </footer>
-    
+
     <!-- Подключение JavaScript файла -->
     <script src="script.js"></script> <!-- Подключаем JS -->
 </body>
