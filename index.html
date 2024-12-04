@@ -200,7 +200,8 @@
                                 <img src="./catalog/engraving/4344454647483.png" alt="Продукт 3" class="clickable-img">
                             </div>
                             <div class="page right-page">
-                                <img src="./catalog/engraving/979899100101102.png" alt="Продукт 4" class="clickable-img">
+                                <img src="./catalog/engraving/979899100101102.png" alt="Продукт 4"
+                                    class="clickable-img">
                             </div>
                         </div>
                     </div>
@@ -208,8 +209,46 @@
                     <button class="next-btn">→</button>
                 </div>
             </div>
+            <!-- Новый слайдер - Оградки -->
+            <div>
+                <h3>Оградки</h3>
+                <p>Мы предлагаем широкий выбор оградок различных стилей и размеров для обрамления могил.</p>
+                <button id="toggle-fences-slider-btn" class="toggle-slider-btn">Показать каталог</button>
+                <div class="book-slider-container" id="fences-slider" style="display: none;">
+                    <div class="book-slider">
+                        <div class="book-slide">
+                            <div class="page left-page">
+                                <img src="./catalog/ogradka/og1.jpg" alt="Оградка 1" class="clickable-img">
+                            </div>
+                            <div class="page right-page">
+                                <img src="./catalog/ogradka/og2.jpg" alt="Оградка 2" class="clickable-img">
+                            </div>
+                        </div>
+                        <div class="book-slide">
+                            <div class="page left-page">
+                                <img src="./catalog/ogradka/og3.jpg" alt="Оградка 3" class="clickable-img">
+                            </div>
+                            <div class="page right-page">
+                                <img src="./catalog/ogradka/og4.jpg" alt="Оградка 4" class="clickable-img">
+                            </div>
+                        </div>
+                        <div class="book-slide">
+                            <div class="page left-page">
+                                <img src="./catalog/ogradka/og5.jpg" alt="Оградка 3" class="clickable-img">
+                            </div>
+                            <div class="page right-page">
+                                <img src="./catalog/ogradka/og6.jpg" alt="Оградка 4" class="clickable-img">
+                            </div>
+                        </div>
 
+                    </div>
+                    <button class="prev-btn">←</button>
+                    <button class="next-btn">→</button>
+                </div>
+            </div>
         </div>
+    </div>
+    </div>
     </div>
     </div>
 
@@ -220,17 +259,38 @@
     </div>
 
 
-    <!-- Раздел "Примеры выполненных работ" -->
     <div class="section" id="results">
         <h2>Примеры выполненных работ</h2>
         <div class="image-banner">
-            <!-- 6 картинок с фиксированной шириной и высотой -->
+            <!-- Существующие изображения -->
             <div class="image-item"><img src="./photo/1 (18).jpg" alt="Результат 1"></div>
             <div class="image-item"><img src="./photo/1 (12).jpg" alt="Результат 2"></div>
             <div class="image-item"><img src="./photo/1 (16).jpg" alt="Результат 3"></div>
             <div class="image-item"><img src="./photo/1 (17).jpg" alt="Результат 4"></div>
             <div class="image-item"><img src="./photo/1 (19).jpg" alt="Результат 5"></div>
             <div class="image-item"><img src="./photo/1 (20).jpg" alt="Результат 6"></div>
+            <div class="image-item"><img src="./photo/ex1.jpg" alt="Результат 7"></div>
+            <div class="image-item"><img src="./photo/1 (22).jpg" alt="Результат 8"></div>
+
+            <!-- Видео элемент -->
+            <div class="image-item">
+                <video width="100%" height="100%" preload="metadata"
+                    onclick="this.paused ? this.play() : this.pause();">
+                    <source src="./videos/result.mp4" type="video/mp4">
+                    Ваш браузер не поддерживает тег video.
+                </video>
+            </div>
+        </div>
+
+        <!-- Полноширинные изображения -->
+        <div class="full-width-image">
+            <img src="./photo/ex3.jpg" alt="Полноширинный пример 1">
+        </div>
+        <div class="full-width-image">
+            <img src="./photo/ex4.jpg" alt="Полноширинный пример 2">
+        </div>
+        <div class="full-width-image">
+            <img src="./photo/ex5.jpg" alt="Полноширинный пример 3">
         </div>
     </div>
 
