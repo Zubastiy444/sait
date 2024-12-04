@@ -179,7 +179,47 @@ h2 {
     justify-content: space-between;
     gap: 30px;
 }
+/* Существующие стили остаются без изменений */
 
+/* Добавляем стили для оградок */
+#fences-slider {
+    /* Используем те же стили, что и для других слайдеров */
+}
+
+#toggle-fences-slider-btn {
+    display: block;
+    margin-bottom: 10px;
+    padding: 10px 20px;
+    font-size: 16px;
+    color: #fff;
+    background-color: #6c757d; /* Серый цвет */
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+#toggle-fences-slider-btn:hover {
+    background-color: #5a6268; /* Более тёмный серый при наведении */
+    transform: scale(1.05);
+}
+
+/* Стили для изображений оградок */
+#fences-slider .page img {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain;
+}
+
+/* Медиа-запрос для адаптивности слайдера оградок */
+@media (max-width: 768px) {
+    #fences-slider {
+        width: 100%;
+        height: 300px;
+    }
+}
+
+/* Остальные стили остаются без изменений */
 
 /* Анимации */
 .fadeIn {
@@ -243,8 +283,8 @@ h2 {
     /* Отступы между картинками */
     width: 100%;
     /* Ширина контейнера */
-    height: 800px;
-    /* Ширина контейнера */
+    height: 1600px;
+    /* Высота контейнера увеличена для размещения 3 рядов */
     margin: 0 auto;
     /* Центрируем контейнер по горизонтали */
     margin-bottom: 150px;
@@ -255,17 +295,87 @@ h2 {
     /* Ширина каждого элемента в сетке 100% от своей ячейки */
     height: 100%;
     /* Фиксированная высота для каждой картинки */
-    overflow: fill;
+    overflow: hidden;
     /* Скрываем лишнее, если изображение выходит за пределы */
 }
 
-.image-item img {
+.image-item img, 
+.image-item video{
     width: 100%;
     /* Ширина изображения 100% от ширины контейнера */
     height: 100%;
     /* Высота изображения 100% от высоты контейнера */
     border-radius: 15px;
 }
+.video-item {
+    cursor: pointer;
+    position: relative;
+}
+
+.video-item::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 20px 0 20px 40px;
+    border-color: transparent transparent transparent rgba(255, 255, 255, 0.8);
+    z-index: 2;
+    transition: opacity 0.3s ease;
+}
+
+.video-item:hover::after {
+    opacity: 0.7;
+}
+
+.video-item.playing::after {
+    display: none;
+}
+/* Медиа-запрос для мобильных устройств */
+@media (max-width: 768px) {
+    .image-banner {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    
+    .full-width-image img {
+        height: auto;
+    }
+}
+/*----------------------- Стили для полноширинного изображения */
+.full-width-image {
+    width: 100%;
+    margin-top: 30px; /* Отступ от сетки изображений выше */
+    overflow: hidden;
+}
+
+.full-width-image img {
+    width: 100%;
+    height: 500px;
+    object-fit: fill;
+    border-radius: 15px; /* Сохраняем закругленные углы, как у других изображений */
+}
+
+/* Обновляем стили .image-banner для поддержки нового макета */
+.image-banner {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 15px;
+    width: 100%;
+    height: auto; /* Изменяем на auto для адаптивности */
+    margin: 0 auto;
+    margin-bottom: 0; /* Убираем нижний отступ, так как теперь есть полноширинное изображение */
+}
+
+/* Обновляем стили #results для корректного отображения */
+#results {
+    text-align: center;
+    margin-bottom: 50px; /* Сохраняем отступ снизу для всего блока */
+}
+
+
 
 /* контакты------------------------------------------------------------------------------------- */
 /* Контейнер для карты и координат */
@@ -273,6 +383,7 @@ h2 {
     display: flex;
     justify-content: space-between;
     gap: 10px;
+    /* margin-top: 950px; */
     /* Уменьшено расстояние между блоками */
 }
 
