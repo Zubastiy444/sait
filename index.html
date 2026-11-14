@@ -1,362 +1,256 @@
 <!DOCTYPE html>
-<html lang="ru">
+<html lang="ru" class="no-js">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Помним, любим, скорбим</title>
-    <link rel="icon" href="./icons/mogils.ico" type="image/png"> <!-- Иконка сайта -->
-    <link href="https://fonts.googleapis.com/css2?family=Segoe+UI:wght@400;600&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-
-    <!-- Подключаем шрифт -->
-    <link rel="stylesheet" href="styles.css"> <!-- Подключаем CSS -->
+    <title>Помним, любим, скорбим — памятники и благоустройство в Калуге</title>
+    <meta name="description" content="Изготовление и установка памятников, оград, укладка плитки и благоустройство мест захоронения в Калуге и области.">
+    <meta name="theme-color" content="#151513">
+    <link rel="icon" href="./icons/mogils.ico">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Golos+Text:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
 </head>
 
 <body>
-    <!-- Шапка сайта с заголовком и навигацией -->
-    <header>
-        <h1>Помним, любим, скорбим</h1>
-        <nav>
+    <div class="grain" aria-hidden="true"></div>
+
+    <!-- Шапка -->
+    <header class="site-header" id="top">
+        <a href="#top" class="brand" aria-label="На главную">
+            <svg class="brand-mark" viewBox="0 0 24 40" aria-hidden="true">
+                <path d="M3 39V12a9 9 0 0 1 18 0v27" fill="none" stroke="currentColor" stroke-width="1.4" />
+                <path d="M1 39h22" stroke="currentColor" stroke-width="1.4" />
+            </svg>
+            <span>Помним, любим, скорбим</span>
+        </a>
+        <nav class="site-nav" id="site-nav" aria-label="Основная навигация">
             <a href="#about">О нас</a>
-            <a href="#products">Продукция</a>
-            <a href="#results">Примеры</a>
+            <a href="#services">Услуги</a>
+            <a href="#products">Каталог</a>
+            <a href="#results">Работы</a>
             <a href="#contacts">Контакты</a>
         </nav>
-
+        <a class="header-cta" href="https://vk.com/vsegda_v_pamyati" target="_blank" rel="noopener">Написать</a>
+        <button class="nav-toggle" id="nav-toggle" aria-label="Открыть меню" aria-expanded="false" aria-controls="site-nav">
+            <span></span><span></span>
+        </button>
     </header>
 
-    <!-- Баннер с текстом -->
-    <div class="banner">
-        <div class="banner-text">Сохраните память о близких с достоинством</div>
-    </div>
-
-    <!-- Раздел "О нас" -->
-    <div class="content fadeIn" id="about">
-        <h2>О нас</h2>
-        <div class="about">
-            <div class="photos">
-                <div class="photo-item">
-                    <span>До</span>
-                    <img src="./photo/before.jpg" alt="До">
-                </div>
-                <div class="photo-item">
-                    <span>После</span>
-                    <img src="./photo/after.jpg" alt="После">
+    <main>
+        <!-- Первый экран -->
+        <section class="hero">
+            <div class="hero-text">
+                <p class="eyebrow reveal">Памятники и благоустройство · Калуга и область</p>
+                <h1 class="reveal">Сохраните память о&nbsp;близких <em>с&nbsp;достоинством</em></h1>
+                <p class="hero-lead reveal">Изготавливаем памятники из гранита и мрамора, наносим портреты, устанавливаем
+                    ограды и благоустраиваем участок — от демонтажа старого до последней плитки.</p>
+                <div class="hero-actions reveal">
+                    <a href="#products" class="btn btn-gold">Смотреть каталог</a>
+                    <a href="#results" class="btn btn-ghost">Наши работы</a>
                 </div>
             </div>
-            <div class="about-text">
-                <p>Мы частная компания, которая специализируется на изготовлении памятников высокого качества и
-                    предлагает широкий выбор материалов и дизайнов, чтобы помочь Вам создать достойный памятник для
-                    ваших
-                    близких.</p>
-                <ul>
-                    <li>Индивидуальный подход к каждому клиенту</li>
-                    <li>Высококачественные материалы</li>
-                    <li>Опытные мастера</li>
-                    <li>Гарантия на все изделия</li>
-                </ul>
-                <p>Кроме изготовления памятников, мы предлагаем широкий спектр дополнительных услуг:</p>
-                <ul>
-                    <li>Демонтаж старых захоронений</li>
-                    <li>Укладка тротуарной плитки, керамогранита, гранитной плитки</li>
-                    <li>Установка бордюра</li>
-                    <li>Реставрация памятников</li>
-                    <li>Установка и демонтаж старых памятников</li>
-                    <li>Изготовление памятников. Гранитные комплексы</li>
-                    <li>Демонтаж старых оград, монтаж новых оград</li>
-                </ul>
-                <p>Мы работаем в Калуге и области, предлагая нашим клиентам качественные услуги и индивидуальный подход
-                    к
-                    каждому заказу.</p>
-            </div>
-        </div>
-    </div>
+            <figure class="hero-figure reveal">
+                <div class="hero-frame">
+                    <img src="./photo/1 (18).jpg" alt="Памятник из тёмного гранита с портретом, выполненный нашими мастерами">
+                </div>
+                <figcaption>Гранит, цветной портрет, гравировка креста золотом</figcaption>
+            </figure>
+            <a href="#about" class="scroll-cue" aria-label="Листать вниз"><span></span></a>
+        </section>
 
-    <!-- Раздел "Продукция" -->
-    <div class="section" id="products">
-        <h2>Продукция</h2>
-        <div class="section-content">
-            <!-- Первый слайдер - Памятники без гравировки -->
-            <div>
-                <h3>Памятники без гравировки</h3>
-                <p>Мы предлагаем различные виды памятников, выполненные из гранита, мрамора и других материалов, с
-                    возможностью индивидуального дизайна.</p>
-                <button id="toggle-slider-btn" style="display: block; margin-bottom: 10px;">Показать каталог</button>
-                <div class="book-slider-container" style="display: none;">
-                    <div class="book-slider">
-                        <div class="book-slide">
-                            <div class="page left-page">
-                                <img src="./catalog/123456.png" alt="Продукт 1" class="clickable-img">
-                            </div>
-                            <div class="page right-page">
-                                <img src="./catalog/789101112.png" alt="Продукт 2" class="clickable-img">
-                            </div>
-                        </div>
-                        <div class="book-slide">
-                            <div class="page left-page">
-                                <img src="./catalog/131415161718.png" alt="Продукт 3" class="clickable-img">
-                            </div>
-                            <div class="page right-page">
-                                <img src="./catalog/192021222324.png" alt="Продукт 4" class="clickable-img">
-                            </div>
-                        </div>
-                        <div class="book-slide">
-                            <div class="page left-page">
-                                <img src="./catalog/252627282930.png" alt="Продукт 5" class="clickable-img">
-                            </div>
-                            <div class="page right-page">
-                                <img src="./catalog/313233343536.png" alt="Продукт 6" class="clickable-img">
-                            </div>
-                        </div>
-                        <div class="book-slide">
-                            <div class="page left-page">
-                                <img src="./catalog/373839404142.png" alt="Продукт 7" class="clickable-img">
-                            </div>
-                            <div class="page right-page">
-                                <img src="./catalog/434445464748.png" alt="Продукт 8" class="clickable-img">
-                            </div>
-                        </div>
-                        <div class="book-slide">
-                            <div class="page left-page">
-                                <img src="./catalog/495051525354.png" alt="Продукт 9" class="clickable-img">
-                            </div>
-                            <div class="page right-page">
-                                <img src="./catalog/555657585960.png" alt="Продукт 10" class="clickable-img">
-                            </div>
-                        </div>
-                        <div class="book-slide">
-                            <div class="page left-page">
-                                <img src="./catalog/616263646566.png" alt="Продукт 11" class="clickable-img">
-                            </div>
-                            <div class="page right-page">
-                                <img src="./catalog/676869707172.png" alt="Продукт 12" class="clickable-img">
-                            </div>
-                        </div>
+        <!-- О нас -->
+        <section class="section about" id="about">
+            <div class="section-head reveal">
+                <span class="section-num">01</span>
+                <h2>О нас</h2>
+            </div>
+            <div class="about-grid">
+                <div class="compare reveal" id="compare" style="--pos: 50%">
+                    <img src="./photo/after.jpg" alt="Участок после благоустройства" class="compare-img">
+                    <div class="compare-before">
+                        <img src="./photo/before.jpg" alt="Участок до начала работ" class="compare-img">
                     </div>
-                    <button class="prev-btn">←</button>
-                    <button class="next-btn">→</button>
+                    <span class="compare-label compare-label--before">До</span>
+                    <span class="compare-label compare-label--after">После</span>
+                    <div class="compare-handle" aria-hidden="true"><span>‹ ›</span></div>
+                    <input type="range" min="0" max="100" value="50" class="compare-range"
+                        aria-label="Сравнить фото до и после">
+                </div>
+                <div class="about-text reveal">
+                    <p class="about-lead">Мы частная мастерская, которая изготавливает памятники высокого качества и
+                        помогает создать достойное место памяти для ваших близких.</p>
+                    <p>Работаем в Калуге и области. Подбираем материал и форму, согласовываем эскиз и сами выполняем
+                        установку — каждый заказ ведём лично.</p>
+                    <ol class="principles">
+                        <li><span>I</span>Индивидуальный подход к каждому клиенту</li>
+                        <li><span>II</span>Высококачественные материалы</li>
+                        <li><span>III</span>Опытные мастера</li>
+                        <li><span>IV</span>Гарантия на все изделия</li>
+                    </ol>
                 </div>
             </div>
-            <!-- Второй слайдер - Портреты на памятниках -->
-            <div>
-                <h3>Портреты на памятниках</h3>
-                <p>Изображения на памятниках с использованием высококачественных технологий, которые сохраняют четкость
-                    и долговечность.</p>
-                <button id="toggle-portrait-slider-btn" style="display: block; margin-bottom: 10px;">Показать
-                    каталог</button>
-                <div class="book-slider-container" id="portrait-slider" style="display: none;">
-                    <div class="book-slider">
-                        <div class="book-slide">
-                            <div class="page left-page">
-                                <img src="./catalog/engraving/123456.png" alt="Продукт 1" class="clickable-img">
-                            </div>
-                            <div class="page right-page">
-                                <img src="./catalog/engraving/789101112.png" alt="Продукт 2" class="clickable-img">
-                            </div>
-                        </div>
-                        <div class="book-slide">
-                            <div class="page left-page">
-                                <img src="./catalog/engraving/131415161718.png" alt="Продукт 3" class="clickable-img">
-                            </div>
-                            <div class="page right-page">
-                                <img src="./catalog/engraving/192021222324.png" alt="Продукт 4" class="clickable-img">
-                            </div>
-                        </div>
-                        <div class="book-slide">
-                            <div class="page left-page">
-                                <img src="./catalog/engraving/252627282930.png" alt="Продукт 3" class="clickable-img">
-                            </div>
-                            <div class="page right-page">
-                                <img src="./catalog/engraving/313233343536.png" alt="Продукт 4" class="clickable-img">
-                            </div>
-                        </div>
-                        <div class="book-slide">
-                            <div class="page left-page">
-                                <img src="./catalog/engraving/373839404142.png" alt="Продукт 3" class="clickable-img">
-                            </div>
-                            <div class="page right-page">
-                                <img src="./catalog/engraving/495051525354.png" alt="Продукт 4" class="clickable-img">
-                            </div>
-                        </div>
-                        <div class="book-slide">
-                            <div class="page left-page">
-                                <img src="./catalog/engraving/555657585960.png" alt="Продукт 3" class="clickable-img">
-                            </div>
-                            <div class="page right-page">
-                                <img src="./catalog/engraving/616263646566.png" alt="Продукт 4" class="clickable-img">
-                            </div>
-                        </div>
-                        <div class="book-slide">
-                            <div class="page left-page">
-                                <img src="./catalog/engraving/858687888990.png" alt="Продукт 3" class="clickable-img">
-                            </div>
-                            <div class="page right-page">
-                                <img src="./catalog/engraving/919293949596.png" alt="Продукт 4" class="clickable-img">
-                            </div>
-                        </div>
-                        <div class="book-slide">
-                            <div class="page left-page">
-                                <img src="./catalog/engraving/4344454647483.png" alt="Продукт 3" class="clickable-img">
-                            </div>
-                            <div class="page right-page">
-                                <img src="./catalog/engraving/979899100101102.png" alt="Продукт 4"
-                                    class="clickable-img">
-                            </div>
-                        </div>
-                    </div>
-                    <button class="prev-btn">←</button>
-                    <button class="next-btn">→</button>
+        </section>
+
+        <!-- Услуги -->
+        <section class="section services" id="services">
+            <div class="section-head reveal">
+                <span class="section-num">02</span>
+                <h2>Услуги</h2>
+                <p class="section-sub">Кроме изготовления памятников, берём на себя всё благоустройство участка.</p>
+            </div>
+            <ul class="service-list">
+                <li class="reveal"><span class="service-idx">01</span><span class="service-name">Изготовление памятников. Гранитные комплексы</span></li>
+                <li class="reveal"><span class="service-idx">02</span><span class="service-name">Установка и демонтаж старых памятников</span></li>
+                <li class="reveal"><span class="service-idx">03</span><span class="service-name">Реставрация памятников</span></li>
+                <li class="reveal"><span class="service-idx">04</span><span class="service-name">Демонтаж старых оград, монтаж новых</span></li>
+                <li class="reveal"><span class="service-idx">05</span><span class="service-name">Укладка тротуарной плитки, керамогранита, гранитной плитки</span></li>
+                <li class="reveal"><span class="service-idx">06</span><span class="service-name">Установка бордюра</span></li>
+                <li class="reveal"><span class="service-idx">07</span><span class="service-name">Демонтаж старых захоронений</span></li>
+            </ul>
+        </section>
+
+        <!-- Каталог -->
+        <section class="section catalog" id="products">
+            <div class="section-head reveal">
+                <span class="section-num">03</span>
+                <h2>Каталог</h2>
+                <p class="section-sub">Нажмите на страницу каталога, чтобы рассмотреть модели крупно.</p>
+            </div>
+
+            <div class="tabs reveal" role="tablist" aria-label="Разделы каталога">
+                <button class="tab is-active" role="tab" aria-selected="true" aria-controls="panel-monuments" id="tab-monuments">Памятники</button>
+                <button class="tab" role="tab" aria-selected="false" aria-controls="panel-portraits" id="tab-portraits" tabindex="-1">Портреты</button>
+                <button class="tab" role="tab" aria-selected="false" aria-controls="panel-fences" id="tab-fences" tabindex="-1">Оградки</button>
+            </div>
+
+            <div class="tab-panel is-active" id="panel-monuments" role="tabpanel" aria-labelledby="tab-monuments">
+                <p class="panel-desc">Памятники без гравировки из гранита, мрамора и других материалов — с возможностью
+                    индивидуального дизайна.</p>
+                <div class="catalog-grid" data-gallery="monuments">
+                    <button class="catalog-item"><img loading="lazy" src="./catalog/123456.png" alt="Каталог памятников, модели 1–6"></button>
+                    <button class="catalog-item"><img loading="lazy" src="./catalog/789101112.png" alt="Каталог памятников, модели 7–12"></button>
+                    <button class="catalog-item"><img loading="lazy" src="./catalog/131415161718.png" alt="Каталог памятников, модели 13–18"></button>
+                    <button class="catalog-item"><img loading="lazy" src="./catalog/192021222324.png" alt="Каталог памятников, модели 19–24"></button>
+                    <button class="catalog-item"><img loading="lazy" src="./catalog/252627282930.png" alt="Каталог памятников, модели 25–30"></button>
+                    <button class="catalog-item"><img loading="lazy" src="./catalog/313233343536.png" alt="Каталог памятников, модели 31–36"></button>
+                    <button class="catalog-item"><img loading="lazy" src="./catalog/373839404142.png" alt="Каталог памятников, модели 37–42"></button>
+                    <button class="catalog-item"><img loading="lazy" src="./catalog/434445464748.png" alt="Каталог памятников, модели 43–48"></button>
+                    <button class="catalog-item"><img loading="lazy" src="./catalog/495051525354.png" alt="Каталог памятников, модели 49–54"></button>
+                    <button class="catalog-item"><img loading="lazy" src="./catalog/555657585960.png" alt="Каталог памятников, модели 55–60"></button>
+                    <button class="catalog-item"><img loading="lazy" src="./catalog/616263646566.png" alt="Каталог памятников, модели 61–66"></button>
+                    <button class="catalog-item"><img loading="lazy" src="./catalog/676869707172.png" alt="Каталог памятников, модели 67–72"></button>
                 </div>
             </div>
-            <!-- Новый слайдер - Оградки -->
-            <div>
-                <h3>Оградки</h3>
-                <p>Мы предлагаем широкий выбор оградок различных стилей и размеров для обрамления могил.</p>
-                <button id="toggle-fences-slider-btn" class="toggle-slider-btn">Показать каталог</button>
-                <div class="book-slider-container" id="fences-slider" style="display: none;">
-                    <div class="book-slider">
-                        <div class="book-slide">
-                            <div class="page left-page">
-                                <img src="./catalog/ogradka/og1.jpg" alt="Оградка 1" class="clickable-img">
-                            </div>
-                            <div class="page right-page">
-                                <img src="./catalog/ogradka/og2.jpg" alt="Оградка 2" class="clickable-img">
-                            </div>
-                        </div>
-                        <div class="book-slide">
-                            <div class="page left-page">
-                                <img src="./catalog/ogradka/og3.jpg" alt="Оградка 3" class="clickable-img">
-                            </div>
-                            <div class="page right-page">
-                                <img src="./catalog/ogradka/og4.jpg" alt="Оградка 4" class="clickable-img">
-                            </div>
-                        </div>
-                        <div class="book-slide">
-                            <div class="page left-page">
-                                <img src="./catalog/ogradka/og5.jpg" alt="Оградка 3" class="clickable-img">
-                            </div>
-                            <div class="page right-page">
-                                <img src="./catalog/ogradka/og6.jpg" alt="Оградка 4" class="clickable-img">
-                            </div>
-                        </div>
 
-                    </div>
-                    <button class="prev-btn">←</button>
-                    <button class="next-btn">→</button>
+            <div class="tab-panel" id="panel-portraits" role="tabpanel" aria-labelledby="tab-portraits" hidden>
+                <p class="panel-desc">Портреты и изображения на памятниках, выполненные по технологиям, которые сохраняют
+                    чёткость и долговечность.</p>
+                <div class="catalog-grid" data-gallery="portraits">
+                    <button class="catalog-item"><img loading="lazy" src="./catalog/engraving/123456.png" alt="Каталог портретов, страница 1"></button>
+                    <button class="catalog-item"><img loading="lazy" src="./catalog/engraving/789101112.png" alt="Каталог портретов, страница 2"></button>
+                    <button class="catalog-item"><img loading="lazy" src="./catalog/engraving/131415161718.png" alt="Каталог портретов, страница 3"></button>
+                    <button class="catalog-item"><img loading="lazy" src="./catalog/engraving/192021222324.png" alt="Каталог портретов, страница 4"></button>
+                    <button class="catalog-item"><img loading="lazy" src="./catalog/engraving/252627282930.png" alt="Каталог портретов, страница 5"></button>
+                    <button class="catalog-item"><img loading="lazy" src="./catalog/engraving/313233343536.png" alt="Каталог портретов, страница 6"></button>
+                    <button class="catalog-item"><img loading="lazy" src="./catalog/engraving/373839404142.png" alt="Каталог портретов, страница 7"></button>
+                    <button class="catalog-item"><img loading="lazy" src="./catalog/engraving/495051525354.png" alt="Каталог портретов, страница 8"></button>
+                    <button class="catalog-item"><img loading="lazy" src="./catalog/engraving/555657585960.png" alt="Каталог портретов, страница 9"></button>
+                    <button class="catalog-item"><img loading="lazy" src="./catalog/engraving/616263646566.png" alt="Каталог портретов, страница 10"></button>
+                    <button class="catalog-item"><img loading="lazy" src="./catalog/engraving/858687888990.png" alt="Каталог портретов, страница 11"></button>
+                    <button class="catalog-item"><img loading="lazy" src="./catalog/engraving/919293949596.png" alt="Каталог портретов, страница 12"></button>
+                    <button class="catalog-item"><img loading="lazy" src="./catalog/engraving/4344454647483.png" alt="Каталог портретов, страница 13"></button>
+                    <button class="catalog-item"><img loading="lazy" src="./catalog/engraving/979899100101102.png" alt="Каталог портретов, страница 14"></button>
                 </div>
             </div>
-        </div>
-    </div>
-    </div>
-    </div>
-    </div>
 
-    <!-- Модальное окно для полноэкранного просмотра -->
-    <div id="image-modal" class="modal">
-        <span id="close-modal" class="close-btn">&times;</span>
-        <img id="modal-img" src="" alt="Full-screen image">
-    </div>
-
-
-    <div class="section" id="results">
-        <h2>Примеры выполненных работ</h2>
-        <div class="image-banner">
-            <!-- Существующие изображения -->
-            <div class="image-item"><img src="./photo/1 (18).jpg" alt="Результат 1"></div>
-            <div class="image-item"><img src="./photo/1 (12).jpg" alt="Результат 2"></div>
-            <div class="image-item"><img src="./photo/1 (16).jpg" alt="Результат 3"></div>
-            <div class="image-item"><img src="./photo/1 (17).jpg" alt="Результат 4"></div>
-            <div class="image-item"><img src="./photo/1 (19).jpg" alt="Результат 5"></div>
-            <div class="image-item"><img src="./photo/1 (20).jpg" alt="Результат 6"></div>
-            <div class="image-item"><img src="./photo/ex1.jpg" alt="Результат 7"></div>
-            <div class="image-item"><img src="./photo/1 (22).jpg" alt="Результат 8"></div>
-
-            <!-- Видео элемент -->
-            <div class="image-item">
-                <video width="100%" height="100%" preload="metadata"
-                    onclick="this.paused ? this.play() : this.pause();">
-                    <source src="./videos/result.mp4" type="video/mp4">
-                    Ваш браузер не поддерживает тег video.
-                </video>
+            <div class="tab-panel" id="panel-fences" role="tabpanel" aria-labelledby="tab-fences" hidden>
+                <p class="panel-desc">Широкий выбор оградок различных стилей и размеров для обрамления места захоронения.</p>
+                <div class="catalog-grid" data-gallery="fences">
+                    <button class="catalog-item"><img loading="lazy" src="./catalog/ogradka/og1.jpg" alt="Оградка, вариант 1"></button>
+                    <button class="catalog-item"><img loading="lazy" src="./catalog/ogradka/og2.jpg" alt="Оградка, вариант 2"></button>
+                    <button class="catalog-item"><img loading="lazy" src="./catalog/ogradka/og3.jpg" alt="Оградка, вариант 3"></button>
+                    <button class="catalog-item"><img loading="lazy" src="./catalog/ogradka/og4.jpg" alt="Оградка, вариант 4"></button>
+                    <button class="catalog-item"><img loading="lazy" src="./catalog/ogradka/og5.jpg" alt="Оградка, вариант 5"></button>
+                    <button class="catalog-item"><img loading="lazy" src="./catalog/ogradka/og6.jpg" alt="Оградка, вариант 6"></button>
+                    <button class="catalog-item"><img loading="lazy" src="./catalog/ogradka/og7.jpg" alt="Оградка, вариант 7"></button>
+                </div>
             </div>
-        </div>
+        </section>
 
-        <!-- Полноширинные изображения -->
-        <div class="full-width-image">
-            <img src="./photo/ex3.jpg" alt="Полноширинный пример 1">
-        </div>
-        <div class="full-width-image">
-            <img src="./photo/ex4.jpg" alt="Полноширинный пример 2">
-        </div>
-        <div class="full-width-image">
-            <img src="./photo/ex5.jpg" alt="Полноширинный пример 3">
-        </div>
-    </div>
-
-    <!-- Раздел "Контакты" -->
-    <div id="contacts">
-        <h2>Контакты</h2>
-        <div class="contact-content">
-            <!-- Интерактивная карта -->
-            <!-- <div class="map-container">
-                <iframe
-                    src="https://yandex.ru/map-widget/v1/?um=constructor%3A14cca426904b4e1f3b18c0e10aa40bd6c2c691e5397dfe1a869ff852a0a9361d&amp;source=constructor"
-                    width="800" height="400" frameborder="0">
-                </iframe>
-            </div> -->
-            <!-- <div class="contact-info">
-                <h3>Наши координаты</h3>
-                <p>Адрес: ул. АДРЕС, 123, г. Калуга</p>
-                <p>Телефон: +7 (123) 456-78-90</p>
-                <p>Почта: example@mail.ru</p>
-            </div> -->
-            <div class="social-links">
-                <h3>Мы в соцсетях</h3>
-                <ul>
-                    <!-- <li><a href="#" class="telegram"><i class="fab fa-telegram-plane"></i></a></li> -->
-                    <li><a href="https://vk.com/vsegda_v_pamyati" class="vk"><i class="fab fa-vk"></i></a></li>
-                </ul>
+        <!-- Работы -->
+        <section class="section works" id="results">
+            <div class="section-head reveal">
+                <span class="section-num">04</span>
+                <h2>Выполненные работы</h2>
+                <p class="section-sub">Памятники, комплексы и благоустройство, которые мы сделали для наших заказчиков.</p>
             </div>
-        </div>
-    </div>
 
-    <!-- Форма обратной связи -->
-    <!-- <div class="contact-form">
-        <h3>Свяжитесь с нами</h3>
-        <form action="#" method="post">
-            <label for="name">Ваше имя:</label>
-            <input type="text" id="name" name="name" required><br><br>
-
-            <label for="email">Ваша почта:</label>
-            <input type="email" id="email" name="email" required><br><br>
-
-            <label for="message">Ваше сообщение:</label><br>
-            <textarea id="message" name="message" rows="4" required></textarea><br><br>
-
-            <button type="submit">Отправить</button>
-        </form>
-    </div> -->
-
-    <!-- Подвал сайта с дополнительной информацией и навигацией -->
-    <footer>
-        <div class="footer-content">
-            <p>&copy; 2024 Помним, любим, скорбим. Все права защищены.</p>
-            <div class="footer-nav">
-                <a href="#about">О нас</a>
-                <a href="#products">Продукция</a>
-                <a href="#results">Примеры</a>
-                <a href="#contacts">Контакты</a>
+            <div class="works-grid" data-gallery="works">
+                <button class="work-item work-item--tall reveal"><img loading="lazy" src="./photo/1 (18).jpg" alt="Выполненная работа 1"></button>
+                <button class="work-item reveal"><img loading="lazy" src="./photo/1 (12).jpg" alt="Выполненная работа 2"></button>
+                <button class="work-item reveal"><img loading="lazy" src="./photo/1 (16).jpg" alt="Выполненная работа 3"></button>
+                <button class="work-item work-item--wide reveal"><img loading="lazy" src="./photo/ex3.jpg" alt="Мемориал «Люди, помните, какой ценой завоевана Победа!»"></button>
+                <button class="work-item reveal"><img loading="lazy" src="./photo/1 (17).jpg" alt="Выполненная работа 4"></button>
+                <button class="work-item work-item--tall reveal"><img loading="lazy" src="./photo/1 (19).jpg" alt="Выполненная работа 5"></button>
+                <button class="work-item reveal"><img loading="lazy" src="./photo/1 (20).jpg" alt="Выполненная работа 6"></button>
+                <div class="work-item work-item--video reveal">
+                    <video preload="metadata" playsinline controls>
+                        <source src="./videos/result.mp4" type="video/mp4">
+                        Ваш браузер не поддерживает видео.
+                    </video>
+                </div>
+                <button class="work-item reveal"><img loading="lazy" src="./photo/ex1.jpg" alt="Выполненная работа 7"></button>
+                <button class="work-item work-item--wide reveal"><img loading="lazy" src="./photo/ex4.jpg" alt="Выполненная работа 8"></button>
+                <button class="work-item reveal"><img loading="lazy" src="./photo/1 (22).jpg" alt="Выполненная работа 9"></button>
+                <button class="work-item work-item--wide reveal"><img loading="lazy" src="./photo/ex5.jpg" alt="Выполненная работа 10"></button>
             </div>
-            <div class="footer-social-links">
-                <a href="#" class="telegram"><i class="fab fa-telegram-plane"></i></a>
-                <a href="https://vk.com/vsegda_v_pamyati" class="vk"><i class="fab fa-vk"></i></a>
+        </section>
+
+        <!-- Контакты -->
+        <section class="section contacts" id="contacts">
+            <div class="contacts-card reveal">
+                <div>
+                    <span class="section-num">05</span>
+                    <h2>Обсудим ваш заказ</h2>
+                    <p>Напишите нам ВКонтакте: пришлите фото участка или пожелания по памятнику — подскажем по материалам,
+                        срокам и стоимости.</p>
+                </div>
+                <a href="https://vk.com/vsegda_v_pamyati" class="vk-link" target="_blank" rel="noopener">
+                    <svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M12.8 17.5c-5.5 0-8.6-3.8-8.7-10h2.8c.1 4.6 2.1 6.5 3.7 6.9V7.5h2.6v3.9c1.6-.2 3.3-2 3.8-3.9h2.6c-.4 2.4-2.2 4.2-3.4 4.9 1.3.6 3.3 2.1 4 4.8h-2.9c-.6-1.9-2.1-3.3-4.1-3.5v3.5h-.4Z"/></svg>
+                    <span><small>Мы ВКонтакте</small>vk.com/vsegda_v_pamyati</span>
+                    <i aria-hidden="true">→</i>
+                </a>
             </div>
-        </div>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <p class="footer-motto">Помним, любим, скорбим</p>
+        <nav class="footer-nav" aria-label="Навигация в подвале">
+            <a href="#about">О нас</a>
+            <a href="#services">Услуги</a>
+            <a href="#products">Каталог</a>
+            <a href="#results">Работы</a>
+            <a href="#contacts">Контакты</a>
+        </nav>
+        <p class="footer-copy">&copy; <span id="year">2024</span> Помним, любим, скорбим · Калуга и Калужская область</p>
     </footer>
 
-    <!-- Подключение JavaScript файла -->
-    <script src="script.js"></script> <!-- Подключаем JS -->
+    <!-- Просмотр изображений -->
+    <div class="lightbox" id="lightbox" role="dialog" aria-modal="true" aria-label="Просмотр изображения" hidden>
+        <button class="lb-close" aria-label="Закрыть">×</button>
+        <button class="lb-nav lb-prev" aria-label="Предыдущее">←</button>
+        <figure class="lb-stage">
+            <img id="lb-img" src="" alt="">
+            <figcaption id="lb-count"></figcaption>
+        </figure>
+        <button class="lb-nav lb-next" aria-label="Следующее">→</button>
+    </div>
+
+    <script src="script.js"></script>
 </body>
 
 </html>
